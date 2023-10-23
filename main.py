@@ -3,7 +3,7 @@ from fastapi.responses import FileResponse, Response, StreamingResponse
 from PIL import Image
 import io
 app = FastAPI(
-    tilte="ImageAPI",
+    title="ImageAPI",
     version= "0.0.1",
     contact={
         "name": "Fabricio Guimaraes",
