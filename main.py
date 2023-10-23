@@ -2,7 +2,14 @@ from fastapi import FastAPI, HTTPException, Path, UploadFile, Form, File
 from fastapi.responses import FileResponse, Response, StreamingResponse
 from PIL import Image
 import io
-app = FastAPI()
+app = FastAPI(
+    tilte="ImageAPI",
+    version= "0.0.1",
+    contact={
+        "name": "Fabricio Guimaraes",
+        "email": "fdcg@icomp.ufam.edu.br"
+    }
+)
 
 @app.get("/")
 def index():
