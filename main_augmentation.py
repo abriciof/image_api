@@ -1,6 +1,6 @@
 import argparse
-from utils.dataaugmentation import Data_Augmentation
-from utils import datavisualization
+from augmentation.utils.dataaugmentation import Data_Augmentation
+from augmentation.utils import datavisualization
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
