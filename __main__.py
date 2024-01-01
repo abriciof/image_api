@@ -3,6 +3,7 @@ from fastapi.responses import FileResponse, Response, StreamingResponse
 from PIL import Image
 import io
 from augmentation.utils.dataaugmentation import *
+
 app = FastAPI(
     title="ImageAPI",
     version= "0.0.1",
