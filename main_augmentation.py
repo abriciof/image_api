@@ -13,8 +13,13 @@ if __name__ == "__main__":
     parser.add_argument(
         "-n", "--nprocess", help="Number of new images that will be generated")
     args=parser.parse_args()
-    data_augmentation = Data_Augmentation(args.output)
-    data_augmentation.load_data(
-        args.images, args.labels)
-    data_augmentation.run(n_processing=int(args.nprocess))
+
+    # target_folder = ./data
+    image_folder = ''
+    label_folder = ''
+
+    data_augmentation = Data_Augmentation()
+
+    data_augmentation.load_data(args.images, args.labels)
+    data_augmentation.run(n_processing=2)
     data_augmentation.save_data()

@@ -22,7 +22,8 @@ class Data_Augmentation:
             data = {}
             img_name = IMAGE_DIR.split("\\")[-1].split(".")[0]
             if (os.path.exists(os.path.join(LABEL_FOLDER, img_name+".txt"))):
-                data["image"] = cv2.cvtColor(cv2.imread(IMAGE_DIR),cv2.COLOR_BGR2RGB)
+                data["image"] = cv2.cvtColor(cv2.imread(IMAGE_DIR),
+                                             cv2.COLOR_BGR2RGB)
                 data["bounding_boxes"] = self.load_label(
                     os.path.join(LABEL_FOLDER, img_name+".txt"))
             self.dataset.append(data)
@@ -71,7 +72,8 @@ class Data_Augmentation:
 
         for i, data in enumerate(self.augmented_dataset):
             cv2.imwrite(os.path.join(
-                IMAGE_FOLDER, str(i)+".jpg"), cv2.cvtColor(data["image"],cv2.COLOR_RGB2BGR))
+                IMAGE_FOLDER, str(i)+".jpg"), cv2.cvtColor(data["image"],
+                                                           cv2.COLOR_RGB2BGR))
             self.save_bb(os.path.join(LABELS_FOLDER, str(
                 i)+".txt"), data["bounding_boxes"])
 

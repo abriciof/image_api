@@ -5,7 +5,7 @@ import io
 from augmentation.utils.dataaugmentation import *
 
 app = FastAPI(
-    title="ImageAPI",
+    title="PCI Api",
     version= "0.0.1",
     contact={
         "name": "Fabricio Guimaraes",
@@ -15,9 +15,8 @@ app = FastAPI(
 
 @app.get("/")
 def index():
-    
     return {"Author":"Fabrício Guimarẽas",
-            "Year": 2023,}
+            "Year": 2024,}
 
 @app.post('/file')
 async def file_upload(
@@ -59,7 +58,7 @@ async def file_upload(
         response_class=Response
 )
 def get_image():
-    with open("/home/fabricioguimaraes/Documentos/fabricio/archive/PCB_DATASET/images/Missing_hole/01_missing_hole_02.jpg", "rb") as image:
+    with open("D:\\fabri\\Documentos\\Databases\\PCB_DATASET\\images\\Missing_hole\\01_missing_hole_01.jpg", "rb") as image:
         f = image.read()
         # b = bytearray(f).decode()
 
