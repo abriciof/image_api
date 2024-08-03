@@ -1,1 +1,0 @@
-python .\main.py --images "D:\fabri\Documentos\Databases\teste augmentation\images" --labels "D:\fabri\Documentos\Databases\teste augmentation\labels" --output "D:\fabri\Documentos\Databases\teste augmentation\output" --nprocess 2

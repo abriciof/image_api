@@ -1,5 +1,10 @@
 fastapi
+requests
+tqdm
+pyyaml
+seaborn
 Pillow
+protobuf<4.21.3
 pydantic
 pydantic_core
 python-multipart
@@ -8,7 +13,15 @@ starlette
 typing_extensions
 uvicorn
 scikit-image
-numpy
+numpy<1.24.0
 opencv-python
 Pillow
 matplotlib
+torch
+torchvision
+tensorboard>=2.4.1
+opencv-python-headless
+pandas
+ipython
+psutil
+yolov7detect

@@ -1,5 +1,9 @@
-venv
-/__pycache__/*
+venv*
+__pycache__
 token.txt
-/augmentation/__pycache__/*
-/augmentation/utils/__pycache__/*
+.env
+.vscode
+roboflow_0
+*.txt
+images
+annotations
